@@ -201,6 +201,9 @@ class Time
 		if fields.first.length < 3
 			fields.first.insert 0, '19'
 		end
+		if fields.first == '100'
+			fields.first.replace '2000'
+		end
 		Time.utc(*fields)
 	end
 end
